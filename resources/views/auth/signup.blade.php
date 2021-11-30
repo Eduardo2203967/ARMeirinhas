@@ -22,7 +22,7 @@
                                 <span class="text-danger">{{ $errors->first('name') }}</span>
                                 @endif
                             </div>
-                            <h1>Texto Fábio teste</h1>
+                            <h1>Texto Fábio Teste</h1>
                             <div class="form-group mb-2">
                                 <input type="text" name="email" placeholder="Email" id="email_address" class="form-control" value="{{ old('email') }}">
                                 @if ($errors->has('email'))
