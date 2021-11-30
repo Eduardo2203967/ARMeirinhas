@@ -15,7 +15,7 @@
                                 <span class="text-danger">{{ $errors->first('name') }}</span>
                                 @endif
                             </div>
-                            <h1>Olá Teste</h1>
+                            
                             <div class="form-group mb-3">
                                 <input type="text" name="apelido" placeholder="Apelido" id="apelido" class="form-control" value="{{ old('apelido') }}">
                                 @if ($errors->has('name'))
