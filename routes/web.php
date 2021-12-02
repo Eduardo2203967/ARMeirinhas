@@ -3,6 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use Illuminate\Auth\Middleware\Authenticate;
+
+use App\Http\Controllers\DuvidaController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,6 +28,4 @@ Route::post('/create-user', [AuthController::class, 'customSignup'])->name('user
 Route::get('/dashboard', [AuthController::class, 'dashboardView'])->name('dashboard')->middleware('auth');
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 
-Route::get('/duvida', function() {
-    return view('duvida');
-});
+Route::get('/duvida', [DuvidaController::class, 'index']);

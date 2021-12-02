@@ -12,7 +12,10 @@
 </head>
 
 <body>
-    <!-- NAVBAR -->
+    <!-- NAVBAR
+    
+     -->
+
     <!-- SLIDER -->
 
     @yield('content')
