@@ -37,10 +37,11 @@ class DuvidaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+        return view('duvida');
     }
+    
 
     /**
      * Store a newly created resource in storage.
@@ -50,7 +51,22 @@ class DuvidaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'nome_duv' => 'required',
+            'email_duv' => 'required|email',
+            'msg_duv' => 'required',
+        ]);
+        $data = $request->all();
+        
+        $duvida = Duvida::create([
+            'nome_duv' => $data['nome_duv'],
+            'email_duv' => $data['email_duv'],
+            'msg_duv' => $data['msg_duv']
+
+        ]);
+
+        return back()->with('success', 'Obrigado! Mensagem Enviada com Sucesso! Responderemos o mais breve possível.');
+        
     }
 
     /**

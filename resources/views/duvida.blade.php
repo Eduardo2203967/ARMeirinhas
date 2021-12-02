@@ -26,18 +26,19 @@
       <div class="right-side">
         <div class="topic-text">Envia-nos a tua dúvida!</div>
         <p>Se tiveres com dificuldades, ou não encontrares solução para qualquer problema, não hesites em contactar-nos.</p>
-      <form action="#">
+      <form action="{{ route('duvida.store') }}" method="POST">
+        @csrf
         <div class="input-box">
-          <input type="text" placeholder="Insira o seu nome">
+          <input type="text" name="nome_duv" id="nome_duv" placeholder="Insira o seu nome">
         </div>
         <div class="input-box">
-          <input type="text" placeholder="Insira o seu email">
+          <input type="text" name="email_duv" id="email_duv" placeholder="Insira o seu email">
         </div>
         <div class="input-box message-box">
-          <input type="text" placeholder="Escreva a sua mensagem">
+          <input type="text" name="msg_duv" id="msg_duv" placeholder="Escreva a sua mensagem">
         </div>
         <div class="button">
-          <input type="button" value="Enviar" >
+        <input class="btn btn-warning" type="submit" value="Enviar">
         </div>
       </form>
     </div>

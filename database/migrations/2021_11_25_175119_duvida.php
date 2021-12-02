@@ -13,17 +13,15 @@ class Duvida extends Migration
      */
     public function up()
     {
-        Schema::create('duvida', function (Blueprint $table) {
+        Schema::create('duvidas', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('user_id');
             $table->string('nome_duv', 35);
             $table->string('email_duv');
             $table->text('msg_duv');
             $table->dateTime('dta_duv')->nullable();
             $table->timestamps();
 
-            /* Chave Estrangeira */
-            $table->foreign('user_id')->references('id')->on('users');
+            
         });
     }
 
@@ -34,6 +32,6 @@ class Duvida extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('duvida');
+        Schema::dropIfExists('duvidas');
     }
 }
