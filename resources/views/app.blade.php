@@ -13,7 +13,10 @@
 
 <body>
 
+<div class="container">
+    @include('layout.partials.nav')
     @yield('content')
+</div>
 
 
 </body>
