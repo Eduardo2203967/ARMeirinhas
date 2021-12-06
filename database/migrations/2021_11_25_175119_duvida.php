@@ -20,8 +20,6 @@ class Duvida extends Migration
             $table->text('msg_duv');
             $table->dateTime('dta_duv')->nullable();
             $table->timestamps();
-
-            
         });
     }
 
