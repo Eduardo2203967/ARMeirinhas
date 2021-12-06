@@ -15,7 +15,11 @@
 
 <div class="container">
     @include('layout.partials.nav')
+
     @yield('content')
+
+    @include('layout.partials.footer')
+
 </div>
 
 
