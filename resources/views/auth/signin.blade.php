@@ -2,7 +2,7 @@
 
 @section('content')
 
-<main class="cotainer mt-5">
+<main class="container mt-5">
 @if(session()->has('message'))
     <div class="alert alert-success">
         {{ session()->get('message') }}
