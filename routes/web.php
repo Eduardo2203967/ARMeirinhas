@@ -5,6 +5,7 @@ use App\Http\Controllers\AuthController;
 use Illuminate\Auth\Middleware\Authenticate;
 
 use App\Http\Controllers\DuvidaController;
+use App\Http\Controllers\SociosController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,4 +29,9 @@ Route::post('/create-user', [AuthController::class, 'customSignup'])->name('user
 Route::get('/dashboard', [AuthController::class, 'dashboardView'])->name('dashboard')->middleware('auth');
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 
+<<<<<<< HEAD
+Route::get('/duvida', [DuvidaController::class, 'index']);
+Route::resource('socio', SociosController::class);
+=======
 Route::resource('duvida', DuvidaController::class);
+>>>>>>> master
