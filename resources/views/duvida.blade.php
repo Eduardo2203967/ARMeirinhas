@@ -1,7 +1,8 @@
 @extends('app')
+<link rel="stylesheet" type="text/css" href="{{ asset('/css/duvida.css') }}">
 
 @section('content')
-  <div class="container">
+  <div class="container duv-container">
     <div class="content">
       <div class="left-side">
         <div class="address details">

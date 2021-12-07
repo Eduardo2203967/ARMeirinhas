@@ -1,38 +1,39 @@
-<nav class="navbar navbar-expand-lg py-3 navbar-dark bg-dark shadow-sm">
-  <div class="container">
-    <a href="#" class="navbar-brand">
-      <!-- Logo Image -->
-      <img src="https://bootstrapious.com/i/snippets/sn-nav-logo/logo.png" width="45" alt="" class="d-inline-block align-middle mr-2">
-      <!-- Logo Text -->
-      <span class="text-uppercase font-weight-bold">AR Meirinhas</span>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+  <a class="navbar-brand" href="#">
+  <img src="{{asset('img/logo.png')}}" alt="logo" width="55" class="img-responsive">
     </a>
-
-    <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
-
-    <div id="navbarSupportedContent" class="collapse navbar-collapse">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item active"><a href="#" class="nav-link">Home <span class="sr-only">(current)</span></a></li>
-        <li class="nav-item"><a href="#" class="nav-link">About</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Services</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">AR Meirinhas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li>
       </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
     </div>
   </div>
 </nav>
 
-
-<section class="py-5">
-  <div class="container py-5">
-    <ol class="pl-3">
-      <li class="mb-3">Add your logo image inside<code>a.navbar-brand</code></li>
-      <li class="mb-3">You can set the logo width and height by<code>width=""</code>,<code>height=""</code> attributes.</li>
-      <li class="mb-3">Add one of <code>.align-top .align-middle .align-bottom</code> classes to vertically adapt adjacent text with the image.</li>
-    </ol>
-    
-    <p class="text-muted mt-5">Snippet by <a href="https://bootstrapious.com/snippets" class="text-reset">
-            <u>Bootstrapious</u></a>
-        </p>
-</p>
-    
-  </div>
-</section>
