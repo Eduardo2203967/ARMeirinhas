@@ -7,7 +7,7 @@
       <div class="left-side">
         <div class="address details">
           <i class="fas fa-map-marker-alt"></i>
-          <div class="topic">Endereço</div>
+          <div class="topic">Endereço</div> 
           <div class="text-one">ESTG</div>
           <div class="text-two">Instituto Politécnico de Leiria</div>
         </div>
