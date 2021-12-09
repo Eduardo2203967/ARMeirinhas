@@ -7,33 +7,20 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
-    
-<<<<<<< HEAD
-    <link rel="stylesheet" type="text/css" href="{{ asset('/css/duvida.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('/css/socios.css') }}">
+
+
 </head>
 
 <body>
-    <!-- NAVBAR
-    
-    -->
-=======
-    
-
-    
-</head>
-
-<body>
->>>>>>> master
+    @include('layout.partials.nav')
 
 <div class="container">
-    @include('layout.partials.nav')
 
     @yield('content')
 
-    @include('layout.partials.footer')
 
 </div>
+@include('layout.partials.footer')
 
 
 </body>
