@@ -1,3 +1,4 @@
+
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark rounded">
   <div class="container-fluid">
   <a class="navbar-brand" href="#">
@@ -31,8 +32,12 @@
             <li class="nav-item">
               <a class="nav-link text-white" href="#">Contact</a>
             </li>
+            
           </ul>
+          <!-- <li><a href="#"><i class="bi bi-people"></i></a></li> -->
         </div>
+        
+        
   </div>
 </nav>
 
