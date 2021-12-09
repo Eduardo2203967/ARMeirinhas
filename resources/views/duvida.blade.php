@@ -1,8 +1,11 @@
 @extends('app')
-<link rel="stylesheet" type="text/css" href="{{ asset('/css/duvida.css') }}">
+
+@section('styles')
+    <link href="{{ asset('css/duvida.css') }}" rel="stylesheet">
+@endsection
 
 @section('content')
-  <div class="container duv-container">
+  <div class="duv-container">
     <div class="content">
       <div class="left-side">
         <div class="address details">
