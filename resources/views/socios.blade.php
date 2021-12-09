@@ -15,7 +15,7 @@
     <div class="banner">
       <img src="{{ asset('img/logo.png') }}" alt="">
       <h1>Torna-te um dos <br/> nossos!</h1>
-      <button class="btn-socios btn1-socios">Torna-te sócio</button>
+      <button class="btn-socios btn1-socios">Tornar sócio</button>
       <button class="btn-socios btn1-socios">Pagar Quotas</button>
     </div>
 
