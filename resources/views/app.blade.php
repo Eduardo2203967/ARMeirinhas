@@ -7,6 +7,7 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+<<<<<<< Updated upstream
 
 
 </head>
@@ -14,13 +15,29 @@
 <body>
     @include('layout.partials.nav')
 
+=======
+    
+  
+</head>
+
+<body>
+    <!-- NAVBAR
+    
+    -->
+
+    @include('layout.partials.nav')
+>>>>>>> Stashed changes
 <div class="container">
 
     @yield('content')
 
 
 </div>
+<<<<<<< Updated upstream
 @include('layout.partials.footer')
+=======
+    @include('layout.partials.footer')
+>>>>>>> Stashed changes
 
 
 </body>
