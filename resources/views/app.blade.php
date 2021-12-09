@@ -12,26 +12,13 @@
 </head>
 
 <body>
-    <!-- NAVBAR
-    
-    -->
-    
-
-    
-</head>
-
-<body>
+@include('layout.partials.nav')
 
 <div class="container">
-    @include('layout.partials.nav')
-
     @yield('content')
-
-    @include('layout.partials.footer')
-
 </div>
 
-
+@include('layout.partials.footer')
 </body>
 
 </html>
