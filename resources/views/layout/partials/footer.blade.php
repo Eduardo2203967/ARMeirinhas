@@ -39,14 +39,7 @@
         ><i class="fab fa-instagram"></i
       ></a>
 
-      <!-- Linkedin -->
-      <a
-        class="btn btn-primary btn-floating m-1"
-        style="background-color: #0082ca;"
-        href="#!"
-        role="button"
-        ><i class="fab fa-linkedin-in"></i
-      ></a>
+    
       <!-- Github -->
       <a
         class="btn btn-primary btn-floating m-1"
@@ -58,22 +51,13 @@
     </section>
     <!-- Section: Social media -->
 
-    <footer class="py-3 my-4">
-    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+    <ul class="nav justify-content-center border-bottom pb-2 mb-3">
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-warning">Página Inicial</a></li>
       <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
       <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+      <li class="nav-item"><a href="{{route('login')}}" class="nav-link px-2 text-muted">Login</a></li>
+      <li class="nav-item"><a href="{{route('duvida.index')}}" class="nav-link px-2 text-muted">Dúvidas</a></li>
     </ul>
     <p class="text-center text-muted">© 2021 Associação Recreativa Meirinhas</p>
   </footer>
 
-    <!-- Section: Text -->
-    <section class="mb-4">
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
-        repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam
-        eum harum corrupti dicta, aliquam sequi voluptate quas.
-      </p>
-    </section>
