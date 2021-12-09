@@ -14,6 +14,7 @@ class SociosController extends Controller
      */
     public function index()
     {
+        return view('socios');
         //
     }
 
@@ -24,7 +25,6 @@ class SociosController extends Controller
      */
     public function create()
     {
-        return view('socios');
     }
 
     /**
