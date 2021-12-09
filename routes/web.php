@@ -29,5 +29,5 @@ Route::post('/create-user', [AuthController::class, 'customSignup'])->name('user
 Route::get('/dashboard', [AuthController::class, 'dashboardView'])->name('dashboard')->middleware('auth');
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 
-Route::resource('duvidas', DuvidaController::class);
+Route::resource('duvida', DuvidaController::class);
 
