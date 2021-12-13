@@ -12,6 +12,7 @@
     @yield('styles')
 </head>
 
+
 <body>
 @include('layout.partials.nav')
 
@@ -23,5 +24,8 @@
 
 @include('layout.partials.footer')
 </body>
+
+
+
 
 </html>

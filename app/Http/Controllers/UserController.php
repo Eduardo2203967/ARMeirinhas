@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Socio;
+use App\Models\User;
 use Illuminate\Http\Request;
 
-class SociosController extends Controller
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class SociosController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Socio  $socio
+     * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function show(Socio $socio)
+    public function show(User $user)
     {
         //
     }
@@ -52,22 +52,22 @@ class SociosController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Socio  $socio
+     * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function edit(Socio $socio)
+    public function edit(User $user)
     {
-        //
+        return view('auth.edit_user', compact($user));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Socio  $socio
+     * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Socio $socio)
+    public function update(Request $request, User $user)
     {
         //
     }
@@ -75,10 +75,10 @@ class SociosController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Socio  $socio
+     * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Socio $socio)
+    public function destroy(User $user)
     {
         //
     }
