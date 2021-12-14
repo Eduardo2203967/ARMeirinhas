@@ -1,0 +1,11 @@
+
+.userbutton::after{
+    display: none;
+    cursor: pointer;
+}
+.dropdown-menu-center {
+    left: 60% !important;
+    right: auto !important;
+    text-align: center !important;
+    transform: translate(-60%, 0) !important;
+  }
