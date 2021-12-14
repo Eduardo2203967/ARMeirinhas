@@ -15,16 +15,12 @@ class Noticia extends Migration
     {
         Schema::create('noticia', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('user_id'); /* Chave Estrangeira */
             $table->string('titulo_noticia', 50);
             $table->string('categoria_noticia', 12);
             $table->text('descri_noticia');
-            $table->binary('img_noticia');
-            $table->dateTime('dta_noticia');
+            $table->string('img_noticia');
+            $table->dateTime('dta_noticia')->nullable();
             $table->timestamps();
-
-            /* Chave Estrangeira */
-            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 
