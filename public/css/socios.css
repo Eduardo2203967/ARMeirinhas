@@ -131,7 +131,7 @@
 
 .card-socios .contenido-card h3{
     line-height: 1.8;
-    font-size: 25px;
+    font-size: 30px;
 	color: black;
 }
 
@@ -167,7 +167,7 @@
     position: absolute;
     left: 0px;
     top: 0;
-    width: 98.5%;
+    width: 98.0%;
     height: 48px;
     margin: 1px;
     background-color: white;
@@ -210,7 +210,6 @@ h1{
     background-color: rgba(37, 37, 37, 0.966);
     color: white;
     font-size: 25px;
-    border-radius: 15px 15px 0 0;
 }
 
 .preco .header2 {
@@ -236,7 +235,6 @@ h1{
 }
   
 .btn4-socios {
-    border-radius: 5px;
     width: 35%;
     height: 48px;
     font-size: 16px;
@@ -256,7 +254,6 @@ h1{
 }
 
 .btn4-socios::before{
-    border-radius: 5px;
     content: "";
     position: absolute;
     left: 0px;

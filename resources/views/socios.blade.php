@@ -33,7 +33,7 @@
   <div class="container-card">
     <div class="card-socios">
       <figure>
-        <img src="{{ asset('img/avatar.png') }}">
+        <img src="{{ asset('img/user.png') }}">
       </figure>
       <div class="contenido-card">
         <h3>Faz-te sócio</h3>
