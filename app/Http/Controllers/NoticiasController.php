@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Noticia;
 use Illuminate\Http\Request;
 
-class Noticia extends Controller
+class NoticiasController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,8 @@ class Noticia extends Controller
      */
     public function index()
     {
-        //
+        $noticias = Noticia::all();
+        return view('noticias', compact('noticias'));
     }
 
     /**
@@ -41,10 +42,10 @@ class Noticia extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Noticia  $noticia
+     * @param  \App\Models\Noticias  $noticias
      * @return \Illuminate\Http\Response
      */
-    public function show(Noticia $noticia)
+    public function show(Noticia $noticias)
     {
         //
     }
@@ -52,10 +53,10 @@ class Noticia extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Noticia  $noticia
+     * @param  \App\Models\Noticias  $noticias
      * @return \Illuminate\Http\Response
      */
-    public function edit(Noticia $noticia)
+    public function edit(Noticia $noticias)
     {
         //
     }
@@ -64,10 +65,10 @@ class Noticia extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Noticia  $noticia
+     * @param  \App\Models\Noticias  $noticias
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Noticia $noticia)
+    public function update(Request $request, Noticia $noticias)
     {
         //
     }
@@ -75,10 +76,10 @@ class Noticia extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Noticia  $noticia
+     * @param  \App\Models\Noticias  $noticias
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Noticia $noticia)
+    public function destroy(Noticia $noticias)
     {
         //
     }

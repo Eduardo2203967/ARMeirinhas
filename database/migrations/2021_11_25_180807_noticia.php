@@ -13,7 +13,7 @@ class Noticia extends Migration
      */
     public function up()
     {
-        Schema::create('noticia', function (Blueprint $table) {
+        Schema::create('noticias', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('titulo_noticia', 50);
             $table->string('categoria_noticia', 12);
