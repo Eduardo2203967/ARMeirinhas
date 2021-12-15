@@ -42,7 +42,7 @@
                     <h2>{{$noticias->first()->categoria_noticia}}</h2>
                 </div>
                 <div id="imagem-not">
-                    <img src="img/noticia2.jpg" alt="background1">
+                    <img src="{{$noticias->first()->img_noticia}}" alt="background1">
                 </div>
                 <!-- Zona Inferior Banner -->
                 <div id="txt-not">
