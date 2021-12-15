@@ -10,7 +10,7 @@
           <a class="nav-link text-white" href="#">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="#">About</a>
+          <a class="nav-link text-white" href="{{ route('noticias') }}">Notícias</a>
         </li>
         <li class="nav-item">
           <a class="nav-link text-white" href="#">Blog</a>

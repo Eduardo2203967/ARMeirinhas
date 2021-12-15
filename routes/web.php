@@ -7,6 +7,7 @@ use Illuminate\Auth\Middleware\Authenticate;
 use App\Http\Controllers\DuvidaController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\NoticiasController;
+use App\Http\Controllers\PageController;
 
 
 
@@ -36,7 +37,7 @@ Route::resource('duvida', DuvidaController::class);
 
 Route::get('/socios', [UserController::class, 'index']);
 
-Route::get('/noticias', [NoticiasController::class, 'index']);
+Route::get('/noticias', [PageController::class, 'noticias'])->name('noticias');
 
 
 Route::get('/edit_profile', [UserController::class, 'edit']);
