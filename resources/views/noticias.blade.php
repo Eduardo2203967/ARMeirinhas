@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-<body class="noticias-body">
+<body>
     
 <form action="POST">
 <section id="main-noticia">
@@ -47,7 +47,7 @@
                 <!-- Zona Inferior Banner -->
                 <div id="txt-not">
                     <div id="txt-data">
-                        <h5>18 setembro 2021</h5>
+                        <h5>{{$noticias->first()->dta_noticia}}</h5>
                     </div>
                     <div id="txt-title">
                         <h3>{{$noticias->first()->titulo_noticia}}</h3>

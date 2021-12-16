@@ -22,6 +22,10 @@ use App\Http\Controllers\PageController;
 |
 */
 
+Route::get('/', function() {
+    return redirect()->route('login');
+});
+
 Route::get('/login', [AuthController::class, 'index'])->name('login');
 Route::post('/custom-signin', [AuthController::class, 'createSignin'])->name('signin.custom');
 
@@ -34,6 +38,7 @@ Route::get('/dashboard', [AuthController::class, 'dashboardView'])->name('dashbo
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::resource('duvida', DuvidaController::class);
+
 
 Route::get('/socios', [UserController::class, 'index']);
 
