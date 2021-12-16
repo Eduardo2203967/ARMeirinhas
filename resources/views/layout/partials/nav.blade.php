@@ -10,16 +10,16 @@
           <a class="nav-link text-white" href="#">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="{{ route('noticias') }}">Notícias</a>
+          <a class="nav-link text-white" href="#">Notícias</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="#">Blog</a>
+          <a class="nav-link text-white" href="#">Sócios</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="#">Pricing</a>
+          <a class="nav-link text-white" href="#">Dúvidas</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="#">Contact</a>
+          <a class="nav-link text-white" href="#">Contactos</a>
         </li>
         </ul>
 
