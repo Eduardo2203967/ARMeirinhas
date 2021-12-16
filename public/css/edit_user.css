@@ -1,5 +1,10 @@
+.card1{
+    border: none;
+}
+
 /* imagem utilizador */
 .user-avatar img{
+    align-items: center;
     max-width: 270px; /* (tamanho maximo da imagem) */
     margin-bottom: 25px; /* (distancia entre a foto e o texto) */
 }
@@ -15,7 +20,7 @@
 
 /* Tamanho do titulo */
 .card-body2 h6{
-    font-size: 25px;
+    font-size: 22px;
 }
 
 .card-body2{
@@ -23,20 +28,20 @@
 }
 
 .form-group{
-    padding-bottom: 10px;
+    padding-bottom: 15px;
 }
 
 /* bordas da caixa ao passar o rato por cima */
 :placeholder-shown:hover{
-    border-color: rgb(131, 147, 238);
+    border-color: rgb(255, 187, 0);
 }
 
 /* margem dos botões */
 .btn{
     margin-bottom: 20px;
+    color: white;
 }
-/* cor dos botões ao passar o rato por cima */
+
 .btn:hover{
-    background-color: rgb(255, 187, 0);
-    border-color: rgb(255, 187, 0);
+    color: white;
 }

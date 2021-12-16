@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Auth;
 
 class UserController extends Controller
 {
@@ -35,7 +36,8 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // 
+
     }
 
     /**
@@ -46,7 +48,7 @@ class UserController extends Controller
      */
     public function show(User $user)
     {
-        //
+        
     }
 
     /**
@@ -55,9 +57,9 @@ class UserController extends Controller
      * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function edit(User $user)
-    {
-        return view('auth.edit_user', compact($user));
+    public function edit(){
+        $user = Auth::user();
+        return view('auth.edit_user', compact('user'));
     }
 
     /**
@@ -67,9 +69,15 @@ class UserController extends Controller
      * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, User $user)
-    {
-        //
+
+    public function update(Request $request, User $user){
+        //$user = User::findOrFail($id);
+
+        $user->name = $request->get('name');
+        $user->apelido = $request->get('apelido');
+        $user->save();
+
+        return redirect()->route('users.edit')->with('message', 'Utilizador foi atualizado');
     }
 
     /**

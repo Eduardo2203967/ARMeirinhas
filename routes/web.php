@@ -40,6 +40,6 @@ Route::get('/socios', [UserController::class, 'index']);
 Route::get('/noticias', [PageController::class, 'noticias'])->name('noticias');
 
 
-Route::get('/edit_profile', [UserController::class, 'edit']);
-Route::put('/edit_profile', [UserController::class, 'update']);
+Route::get('/edit_profile', [UserController::class, 'edit'])->name('users.edit');
+Route::put('/edit_profile/{user}', [UserController::class, 'update'])->name('users.update');
 
