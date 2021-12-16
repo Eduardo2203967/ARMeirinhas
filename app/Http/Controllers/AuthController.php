@@ -29,7 +29,7 @@ class AuthController extends Controller
         ]);
         $credentials = $request->only('email', 'password');
         if (Auth::attempt($credentials)) {
-            return redirect('dashboard')->withSuccess('Bem Vindo ' . Auth::user()->name) . '!';
+            return redirect('noticias')->withSuccess('Bem Vindo ' . Auth::user()->name) . '!';
         }
         return redirect("login")->withSuccess('Dados Errados!');
     }
