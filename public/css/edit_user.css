@@ -33,7 +33,7 @@
 
 /* bordas da caixa ao passar o rato por cima */
 :placeholder-shown:hover{
-    border-color: rgb(255, 187, 0);
+    border-color: rgb(18, 48, 219);
 }
 
 /* margem dos botões */

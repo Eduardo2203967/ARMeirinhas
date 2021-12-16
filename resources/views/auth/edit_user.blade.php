@@ -19,8 +19,8 @@
 					<div class="user-avatar">
 						<img src="{{ asset('img/man.png') }}" alt="Nome utilizador">
 					</div>
-					<h5 class="user-name">(Nome utilizador)</h5>
-					<h6 class="user-email">(email do utilizador)</h6>
+					<h5 class="user-name" name="name" value="{{ old('first_name', $user->name) }}">{{ $user->name }}</h5>
+					<h6 class="user-email" name="email" value="{{ old('email', $user->email) }}">{{ $user->email }}</h6>
 				</div>
 			</div>
 		</div>
@@ -31,7 +31,7 @@
 			<div class="card-body2">
 				<div class="row gutters">
 					<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-						<h6 class="mb-2 text-warning">Informações pessoais</h6>
+						<h6 class="mb-2 text-primary">Informações pessoais</h6>
 					</div>
 					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
 						<div class="form-group">
@@ -60,7 +60,7 @@
 				</div>
 				<div class="row gutters">
 					<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-						<h6 class="mt-3 mb-2 text-warning">Endereço</h6>
+						<h6 class="mt-3 mb-2 text-primary">Endereço</h6>
 					</div>
 					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
 						<div class="form-group">
@@ -85,7 +85,7 @@
 					<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 						<div class="text-right">
 							<button type="button" id="submit" name="submit" class="btn btn-secondary">Cancelar</button>
-							<button type="submit" id="submit" name="submit" class="btn btn-warning">Atualizar</button>
+							<button type="submit" id="submit" name="submit" class="btn btn-primary">Atualizar</button>
 						</div>
 					</div>
 				</div>

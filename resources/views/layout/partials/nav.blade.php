@@ -29,7 +29,7 @@
               <i class="far fa-user fa-lg"></i>
                 </a>
               <ul class="dropdown-menu dropdown-menu-center text-center" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Nome User</a>
+                <a class="dropdown-item" href="#">@if(Auth::user()) {{ Auth::user()->name }} @endif</a>
                 <hr class="my-1">
                 <a class="dropdown-item" href="#">Perfil</a>
                 <a class="dropdown-item" href="{{ route('logout') }}"><i class="fas fa-sign-out-alt"></i> Logout</a>
