@@ -32,7 +32,7 @@
                 <a class="dropdown-item" href="#">Nome User</a>
                 <hr class="my-1">
                 <a class="dropdown-item" href="#">Perfil</a>
-                <a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                <a class="dropdown-item" href="{{ route('logout') }}"><i class="fas fa-sign-out-alt"></i> Logout</a>
               </ul>
             </li>
           </ul>
