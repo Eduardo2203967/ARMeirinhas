@@ -39,7 +39,6 @@ Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::resource('duvida', DuvidaController::class);
 
-
 Route::get('/socios', [UserController::class, 'index']);
 
 Route::get('/noticias', [PageController::class, 'noticias'])->name('noticias');
