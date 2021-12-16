@@ -18,6 +18,11 @@
     text-align: center;
 }
 
+.user-profile .btn{
+    margin-top: 10px;
+    margin-left: 80px;
+}
+
 /* Tamanho do titulo */
 .card-body2 h6{
     font-size: 22px;

@@ -19,8 +19,9 @@
 					<div class="user-avatar">
 						<img src="{{ asset('img/man.png') }}" alt="Nome utilizador">
 					</div>
-					<h5 class="user-name" name="name" value="{{ old('first_name', $user->name) }}">{{ $user->name }}</h5>
+					<h5 class="user-name" name="name" value="{{ old('first_name', $user->name) }}">{{ $user->name }} {{ $user->apelido }}</h5>
 					<h6 class="user-email" name="email" value="{{ old('email', $user->email) }}">{{ $user->email }}</h6>
+					<button type="button" id="submit" name="submit" class="btn btn-success">Alterar foto</button>
 				</div>
 			</div>
 		</div>
@@ -60,24 +61,24 @@
 				</div>
 				<div class="row gutters">
 					<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-						<h6 class="mt-3 mb-2 text-primary">Endereço</h6>
+						<h6 class="mt-3 mb-2 text-primary">Alterar password</h6>
 					</div>
 					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
 						<div class="form-group">
-							<label for="Street">Morada</label>
-							<input type="name" class="form-control" id="Street" placeholder="Introduzir morada">
+							<label for="Street">Password antiga</label>
+							<input type="name" class="form-control" id="Street" placeholder="Inserir password antiga">
 						</div>
 					</div>
 					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
 						<div class="form-group">
-							<label for="ciTy">Cidade</label>
-							<input type="name" class="form-control" id="ciTy" placeholder="Introduzir cidade">
+							<label for="ciTy">Confirmar passord</label>
+							<input type="name" class="form-control" id="ciTy" placeholder="Confirmar password">
 						</div>
 					</div>
 					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
 						<div class="form-group">
-							<label for="zIp">Código postal</label>
-							<input type="text" class="form-control" id="zIp" placeholder="xxxx-xxx">
+							<label for="zIp">Nova password</label>
+							<input type="text" class="form-control" id="zIp" placeholder="Inserir nova password">
 						</div>
 					</div>
 				</div>
