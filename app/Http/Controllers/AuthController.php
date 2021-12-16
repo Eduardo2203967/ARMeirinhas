@@ -44,12 +44,13 @@ class AuthController extends Controller
     public function customSignup(Request $request)
     {  
         $request->validate([
-            'name' => 'required',
-            'apelido' => 'required',
+            'name' => 'required|regex:/^[A-ZÀ-úa-z\s]+$/',
+            'apelido' => 'required|regex:/^[A-ZÀ-úa-z\s]+$/',
             'email' => 'required|email|unique:users',
             'vat_number' => 'max:13',
             'password' => 'required|confirmed|min:6',
-        ]);
+        ]
+    );
         $data = $request->all();
         
         $user = User::create([
@@ -60,7 +61,7 @@ class AuthController extends Controller
         ]);
 
         Auth::login($user);
-        return redirect("dashboard")->withSuccess('Conta criada com Sucesso! Bem Vindo ' . Auth::user()->name . '!');
+        return redirect("noticias")->withSuccess('Conta criada com Sucesso! Bem Vindo ' . Auth::user()->name . '!');
     }
     
 
