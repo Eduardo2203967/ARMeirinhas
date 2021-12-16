@@ -10,13 +10,13 @@
           <a class="nav-link text-white" href="#">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="#">Notícias</a>
+          <a class="nav-link text-white" href="{{ route('noticias') }}">Notícias</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="#">Sócios</a>
+          <a class="nav-link text-white" href="{{ route('socios') }}">Sócios</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="#">Dúvidas</a>
+          <a class="nav-link text-white" href="{{ route('duvida.index') }}">Dúvidas</a>
         </li>
         <li class="nav-item">
           <a class="nav-link text-white" href="#">Contactos</a>
@@ -31,7 +31,7 @@
               <ul class="dropdown-menu dropdown-menu-center text-center" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="#">@if(Auth::user()) {{ Auth::user()->name }} @endif</a>
                 <hr class="my-1">
-                <a class="dropdown-item" href="#">Perfil</a>
+                <a class="dropdown-item" href="{{ route('users.edit') }}">Perfil</a>
                 <a class="dropdown-item" href="{{ route('logout') }}"><i class="fas fa-sign-out-alt"></i> Logout</a>
               </ul>
             </li>
