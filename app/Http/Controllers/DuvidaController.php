@@ -55,7 +55,7 @@ class DuvidaController extends Controller
     public function destroy(duvida $duvida)
     {
         $duvida->delete();
-        return redirect()->back()->with('message','Comentário Apagado com sucesso');
+        return redirect()->back()->with('message','Dúvida Apagado com sucesso');
     }
 }
 
