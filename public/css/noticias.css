@@ -2,8 +2,7 @@
 
 body{
     color: white;
-    background-color: #f39f86;
-    background-image: linear-gradient(315deg, #f39f86 0%, #f9d976 74%);
+    background-color: #acacac;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   }
   
@@ -34,7 +33,7 @@ section#main-noticia div#left-conteudo-noticia div#header-noticia{
     height: 10%;
     width: 100%;
     line-height: 10%;
-    background-color: #323150;
+    background-color: #424041;
     margin-bottom: 30px;
 }
 
@@ -49,14 +48,14 @@ section#main-noticia div#left-conteudo-noticia div#conteudo-noticia{
 section#main-noticia div#left-conteudo-noticia div#conteudo-noticia div#left-conteudo-noticia{
     height: 100%;
     width: 50%;
-    background: #323150;
+    background: #424041;
     border-radius: 15px;
 }
 
 section#main-noticia div#left-conteudo-noticia div#conteudo-noticia div#right-conteudo-noticia{
     height: 100%;
     width: 50%;
-    background: #323150;
+    background: #424041;
     border-radius: 15px;
 }
 
@@ -72,7 +71,7 @@ section#main-noticia div#right-noticia div#classificacao-header{
     height: 10%;
     width: 85%;
     line-height: 10%;
-    background-color: #323150;
+    background-color: #424041;
     margin-bottom: 30px;
     margin-left: auto;
 }
@@ -80,7 +79,7 @@ section#main-noticia div#right-noticia div#classificacao-header{
 section#main-noticia div#right-noticia div#tabela-classificacao{
     width: 85%;
     height: 85%;
-    background-color: #323150;
+    background-color: #424041;
     border-radius: 15px;
     margin-left: auto;
 }
@@ -88,7 +87,7 @@ section#main-noticia div#right-noticia div#tabela-classificacao{
 
 
 section#main-noticia div#header-noticia, section#main-noticia div#classificacao-header{
-    border-left: 5px solid rgb(218, 218, 0);
+    border-left: 5px solid #ffd046;
     border-radius: 10px;
     
 }
@@ -121,7 +120,7 @@ section#main-noticia div#conteudo-noticia div#left-conteudo-noticia div#txt-cate
     margin: 25px 0 0 25px;
     border-radius: 15px;
     border: 0.1px solid rgb(34, 34, 34);
-    background-color: #D9B51D;
+    background-color: #ffd046;
 }
 
 section#main-noticia div#conteudo-noticia div#left-conteudo-noticia div#txt-categoria h1{
@@ -162,7 +161,7 @@ section#main-noticia div#conteudo-noticia div#right-conteudo-noticia div#txt-cat
     margin: 25px 0 0 25px;
     border-radius: 15px;
     border: 0.1px solid rgb(34, 34, 34);
-    background-color: #D9B51D;
+    background-color: #ffd046;
 }
 
 section#main-noticia div#conteudo-noticia div#right-conteudo-noticia div#txt-categoria h1{
