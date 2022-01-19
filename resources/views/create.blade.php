@@ -21,7 +21,7 @@
 
                     <div class="card">
                         <div class="card-header">
-                            <h4>Adicionar Comentário
+                            <h4>Adicionar Mensagem
                                 <a href="{{ url('duvida') }}" class="btn btn-danger float-end">VOLTAR</a>
                             </h4>
                         </div>
@@ -42,7 +42,7 @@
                   <input type="text" name="msg_duv" class="form-control">
                 </div>
                 <div class="mb-3">
-                  <button type="submit" class="btn btn-primary"> Salvar Comentário</button>
+                  <button type="submit" class="btn btn-primary"> Salvar Dúvida</button>
                 </div>
                             </form>
                         </div>
