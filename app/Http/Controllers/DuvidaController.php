@@ -2,115 +2,61 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\DuvidaRequest;
 use App\Models\Duvida;
 use Illuminate\Http\Request;
 
 class DuvidaController extends Controller
 {
-
-    //index = listar tudo
-    //show = mostrar um registo
-
-    //create = mostrar form criação
-    //store = gravar dados do form de criação
-
-    //edit = mostra form de edição de uma dúvida
-    //update = gravar dados do form de edição
-
-    //destroy = apagar um dúvida
-
-
-    
-
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
-        return view('duvida');
+        $duvida = duvida::all();
+        return view('duvida', compact('duvida'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create(Request $request)
+    public function create()
     {
-        return view('duvida');
+        return view('create');
     }
-    
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+    public function store(DuvidaRequest $request)
     {
-        $request->validate([
-            'nome_duv' => 'required',
-            'email_duv' => 'required|email',
-            'msg_duv' => 'required',
-        ]);
-        $data = $request->all();
-        
-        $duvida = Duvida::create([
-            'nome_duv' => $data['nome_duv'],
-            'email_duv' => $data['email_duv'],
-            'msg_duv' => $data['msg_duv']
+        try{
+            $data = $request->validated();
+            Duvida::create($data);
 
-        ]);
-
-        return back()->with('success', 'Obrigado! Mensagem Enviada com Sucesso! Responderemos o mais breve possível.');
+            return redirect('/duvida')->with('message','Dúvida submetida com sucesso');
+        } catch (\Exception $ex){
+            return redirect('/duvida')->with('Algo está mal');
+        }
         
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Duvida  $duvida
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Duvida $duvida)
-    {
-        //
+    public function edit(duvida $duvida){
+
+        return view ('edit', compact('duvida'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Duvida  $duvida
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Duvida $duvida)
+    public function update(DuvidaRequest $request, duvida $duvida)
     {
-        //
+        $data = $request->validated();
+        $duvida->fill($data);
+        $duvida->save();
+
+        return redirect('/duvida')->with('message','Atualizado com Sucesso');
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Duvida  $duvida
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Duvida $duvida)
+    public function show(duvida $duvida)
     {
-        //
+        //return $duvida;
+        return view('show', compact('duvida'));
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Duvida  $duvida
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Duvida $duvida)
+    public function destroy(duvida $duvida)
     {
-        //
+        $duvida->delete();
+        return redirect()->back()->with('message','Comentário Apagado com sucesso');
     }
 }
+
+

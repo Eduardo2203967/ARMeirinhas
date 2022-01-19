@@ -1,30 +1,62 @@
 <?php
 
-namespace App\Http\Requests;
+namespace App\Http\Controllers;
 
-use Illuminate\Foundation\Http\FormRequest;
+use App\Http\Requests\DuvidaRequest;
+use App\Models\Duvida;
+use Illuminate\Http\Request;
 
-class DuvidaRequest extends FormRequest
+class DuvidaController extends Controller
 {
-    /**
-     * Determine if the user is authorized to make this request.
-     *
-     * @return bool
-     */
-    public function authorize()
+    public function index()
     {
-        return false;
+        $duvida = duvida::all();
+        return view('duvida', compact('duvida'));
     }
 
-    /**
-     * Get the validation rules that apply to the request.
-     *
-     * @return array
-     */
-    public function rules()
+    public function create()
     {
-        return [
-            //
-        ];
+        return view('create');
+    }
+
+    public function store(DuvidaRequest $request)
+    {
+        try{
+            $data = $request->validated();
+            Duvida::create($data);
+
+            return redirect('/duvida')->with('message','Dúvida submetida com sucesso');
+        } catch (\Exception $ex){
+            return redirect('/duvida')->with('Algo está mal');
+        }
+        
+    }
+
+    public function edit(duvida $duvida){
+
+        return view ('edit', compact('duvida'));
+    }
+
+    public function update(DuvidaRequest $request, duvida $duvida)
+    {
+        $data = $request->validated();
+        $duvida->fill($data);
+        $duvida->save();
+
+        return redirect('/duvida')->with('message','Atualizado com Sucesso');
+    }
+
+    public function show(duvida $duvida)
+    {
+        //return $duvida;
+        return view('show', compact('duvida'));
+    }
+
+    public function destroy(duvida $duvida)
+    {
+        $duvida->delete();
+        return redirect()->back()->with('message','Comentário Apagado com sucesso');
     }
 }
+
+

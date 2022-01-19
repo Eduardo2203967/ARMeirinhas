@@ -1,51 +1,59 @@
 @extends('app')
 
-@section('styles')
-    <link href="{{ asset('css/duvida.css') }}" rel="stylesheet">
-@endsection
-
 @section('content')
-  <div class="duv-container">
-    <div class="content">
-      <div class="left-side">
-        <div class="address details">
-          <i class="fas fa-map-marker-alt"></i>
-          <div class="topic">Endereço</div> 
-          <div class="text-one">ESTG</div>
-          <div class="text-two">Instituto Politécnico de Leiria</div>
-        </div>
-        <div class="phone details">
-          <i class="fas fa-phone-alt"></i>
-          <div class="topic">Contacto</div>
-          <div class="text-one">913456789</div>
-          <div class="text-two">919876543</div>
-        </div>
-        <div class="email details">
-          <i class="fas fa-envelope"></i>
-          <div class="topic">Email</div>
-          <div class="text-one">2203967@ipleiria.pt</div>
-          <div class="text-two">2201257@ipleiria.pt</div>
-        </div>
+  
+  <div class="py-4">
+    <div class="container">
+      <div class="row">
+
+          @if (session('message'))
+          <h5>{{ session('message')}} </h5>
+          @endif
+
+
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-header">
+              <h4> Adicionar Comentário
+                <a href=" {{url('duvida/create') }}" class="btn btn-primary float-end">Adicionar Comentário</a>
+              </h4>
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th>ID</th>
+                      <th>Nome completo</th>
+                      <th>Email</th>
+                      <th>Mensagem</th>    
+                    </tr>
+                  </thead>
+                  <tbody>
+                    @foreach ($duvida as $item)
+                      <tr>
+                        <td>{{ $item->id }}</td>
+                        <td>{{ $item->nome_duv }}</td>
+                        <td>{{ $item->email_duv }}</td>
+                        <td>{{ $item->msg_duv }}</td>
+                        <td><a href="{{ url('duvida/'.$item->id) }}" class="btn btn-info btn-sm">Mostrar</a><td>
+                        <td><a href="{{url('duvida/' .$item->id. '/edit') }}" class="btn btn-success btn-sm">Editar</a></td>
+                        <td>
+                          <form action="{{ url('duvida/'.$item->id) }}" method="POST">
+                            @csrf 
+                            @method('DELETE')
+                          <button type="submit" class="btn btn-danger btn-sm">Apagar</a>
+                          </form>
+                      </tr>
+                      @endforeach
+                  </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
       </div>
-      <div class="right-side">
-        <div class="topic-text">Envia-nos a tua dúvida!</div>
-        <p>Se tiveres com dificuldades, ou não encontrares solução para qualquer problema, não hesites em contactar-nos.</p>
-      <form action="{{ route('duvida.store') }}" method="POST">
-        @csrf
-        <div class="input-box">
-          <input type="text" name="nome_duv" id="nome_duv" placeholder="Insira o seu nome">
-        </div>
-        <div class="input-box">
-          <input type="text" name="email_duv" id="email_duv" placeholder="Insira o seu email">
-        </div>
-        <div class="input-box message-box">
-          <input type="text" name="msg_duv" id="msg_duv" placeholder="Escreva a sua mensagem">
-        </div>
-        <div class="button">
-        <input class="btn btn-warning" type="submit" value="Enviar">
-        </div>
-      </form>
-    </div>
     </div>
   </div>
 
