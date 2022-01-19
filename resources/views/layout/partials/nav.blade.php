@@ -16,7 +16,7 @@
           <a class="nav-link text-white" href="{{ route('socios') }}">Sócios</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="{{ route('duvida.index') }}">Dúvidas</a>
+          <a class="nav-link text-white" href="{{ route('duvida') }}">Dúvidas</a>
         </li>
         <li class="nav-item">
           <a class="nav-link text-white" href="#">Contactos</a>
